@@ -2,27 +2,28 @@
 
 ## Basic Project Plan
 
-Here's an outline of your project plan:
+### Deliverable 1 : Retrieve Weather Data (Weather_Database folder)
 
-Task: Collect and analyze weather data across cities worldwide.
-Purpose: PlanMyTrip will use the data to recommend ideal hotels based on clients' weather preferences.
-Method: Create a Pandas DataFrame with 500 or more of the world's unique cities and their weather data in real time. This process will entail collecting, analyzing, and visualizing the data.
+1. Generate a set of 2,000 random latitudes and longitudes 
+2. Retrieve the nearest cities using citipy module
+3. API call with the OpenWeatherMap to obtain weather data for each city:
+  - Latitude and Longitude
+  - Maximum Temperature
+  - Percent Humidity
+  - Percent cloudiness
+  - Wind Speed
+  - Weather description  
+4. Create a new DataFrame 
 
-Three Stages of Data Analysis
+### Deliverable 2 : Create a Customer Travel Destinations Map (Vacation_Search folder)
 
-1 Collect the Data
-  Numpy
-  Citipy
-  OpenWeatherMap API
-  JSON data
-  dataframe
+1. Import DataFrame from deliverable 1
+2. Input statements to enter min and max temp criteria for vacation
+3. Create new data frame filtered for min temp = 75; max temp = 90
+4. Removed any empty rows from data frame
+5. Added column for nearest hotel to dataframe
+6. Searched for nearest hotel for each city using lat and lng
+7. Dropped empty rows
+8. Created map of cities with markers (WeatherPy_vacation-map)
 
-2 Exploratory Analysis with Visualization
-  Scatter plots
-  Correlations
-  Heatmaps using Google Maps and Places API
-  
-3 Visualize Travel Data
-  Heatmap with pop up markers
-    Filter df based on user input for min max temp
-
+### Deliverable 3 : Retrieve Weathe Data (Weather
